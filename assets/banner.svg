@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-label="麦麦门店雷达 mcd-store-radar">
+  <title>麦麦门店雷达 mcd-store-radar</title>
+  <desc>基于麦当劳中国官方 MCP 的门店级可得性检索 Skill：查联名商品附近哪些门店在售，以及主题活动哪家店哪天还有名额。</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#27251F"/>
+      <stop offset="58%" stop-color="#332E28"/>
+      <stop offset="100%" stop-color="#4A1E1B"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFC72C" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#DA291C" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="400" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#FFC72C"/>
+  <rect x="0" y="394" width="1280" height="6" fill="#DA291C"/>
+
+  <!-- 右侧装饰：雷达扇形 -->
+  <g opacity="0.5">
+    <circle cx="1090" cy="196" r="150" fill="none" stroke="#FFC72C" stroke-width="1" stroke-opacity="0.28"/>
+    <circle cx="1090" cy="196" r="104" fill="none" stroke="#FFC72C" stroke-width="1" stroke-opacity="0.22"/>
+    <circle cx="1090" cy="196" r="58" fill="none" stroke="#FFC72C" stroke-width="1" stroke-opacity="0.18"/>
+    <path d="M1090 196 L1090 46" stroke="#FFC72C" stroke-width="1.2" stroke-opacity="0.3"/>
+    <path d="M1090 196 L1236 196" stroke="#FFC72C" stroke-width="1.2" stroke-opacity="0.3"/>
+    <path d="M1090 196 L1194 92" stroke="#FFC72C" stroke-width="1.2" stroke-opacity="0.3"/>
+    <path d="M1090 196 L986 92" stroke="#FFC72C" stroke-width="1.2" stroke-opacity="0.3"/>
+    <path d="M1090 196 L1194 300" stroke="#FFC72C" stroke-width="1.2" stroke-opacity="0.3"/>
+    <path d="M1090 196 L986 300" stroke="#FFC72C" stroke-width="1.2" stroke-opacity="0.3"/>
+    <path d="M1090 196 L1090 46 A150 150 0 0 1 1184 68 Z" fill="#FFC72C" fill-opacity="0.10"/>
+  </g>
+  <!-- 门店点位 -->
+  <circle cx="1046" cy="150" r="7" fill="#FFC72C"/>
+  <circle cx="1136" cy="128" r="5" fill="#FFC72C" fill-opacity="0.85"/>
+  <circle cx="1152" cy="238" r="6" fill="#DA291C"/>
+  <circle cx="1020" cy="252" r="5" fill="#FFC72C" fill-opacity="0.8"/>
+  <circle cx="1090" cy="196" r="9" fill="#FFFFFF"/>
+
+  <!-- 左侧文字 -->
+  <text x="70" y="104" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, Arial, sans-serif"
+        font-size="58" font-weight="700" fill="#FFFFFF" letter-spacing="1">麦麦门店雷达</text>
+  <text x="72" y="146" font-family="Consolas, Menlo, monospace"
+        font-size="21" fill="#FFC72C" letter-spacing="5">MCD-STORE-RADAR</text>
+
+  <rect x="70" y="172" width="86" height="4" fill="#DA291C"/>
+
+  <text x="70" y="222" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, Arial, sans-serif"
+        font-size="25" fill="#F2EFE8">同一款联名，全城可能只有 1 家店在卖。</text>
+  <text x="70" y="258" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, Arial, sans-serif"
+        font-size="25" fill="#F2EFE8">同一个派对，5 公里内也许一家都约不上。</text>
+
+  <text x="70" y="300" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, Arial, sans-serif"
+        font-size="18" fill="#B9B2A6">基于麦当劳中国官方 MCP ｜ 该去哪家店抢 · 该去哪家店约</text>
+
+  <!-- 数据徽章 -->
+  <g font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="15">
+    <rect x="70" y="326" width="196" height="38" rx="19" fill="#FFC72C" fill-opacity="0.14" stroke="#FFC72C" stroke-opacity="0.45"/>
+    <text x="168" y="351" fill="#FFC72C" text-anchor="middle">5km → 10km 递进检索</text>
+
+    <rect x="280" y="326" width="184" height="38" rx="19" fill="#FFC72C" fill-opacity="0.14" stroke="#FFC72C" stroke-opacity="0.45"/>
+    <text x="372" y="351" fill="#FFC72C" text-anchor="middle">leftNum 真实余位</text>
+
+    <rect x="478" y="326" width="176" height="38" rx="19" fill="#FFC72C" fill-opacity="0.14" stroke="#FFC72C" stroke-opacity="0.45"/>
+    <text x="566" y="351" fill="#FFC72C" text-anchor="middle">零第三方包依赖</text>
+
+    <rect x="668" y="326" width="150" height="38" rx="19" fill="#DA291C" fill-opacity="0.22" stroke="#DA291C" stroke-opacity="0.6"/>
+    <text x="743" y="351" fill="#FF9E93" text-anchor="middle">15 项测试通过</text>
+  </g>
+</svg>
