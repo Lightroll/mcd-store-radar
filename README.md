@@ -67,7 +67,7 @@ export MCD_MCP_TOKEN="你的_token"
 ### 2. 免 Token 先看效果
 
 ```bash
-git clone https://github.com/<you>/mcd-store-radar.git
+git clone https://github.com/Lightroll/mcd-store-radar.git
 cd mcd-store-radar
 python -m scripts.demo_offline
 ```
@@ -106,7 +106,7 @@ python -m src.cli party-stores --city 上海 --base "31.235356,121.476960" \
 把本仓库放到用户级技能目录后，直接说人话即可：
 
 ```bash
-git clone https://github.com/<you>/mcd-store-radar.git ~/.workbuddy/skills/mcd-store-radar
+git clone https://github.com/Lightroll/mcd-store-radar.git ~/.workbuddy/skills/mcd-store-radar
 ```
 
 > 「我在上海人民广场，附近 5 公里哪些麦当劳还有联名棒球帽？」
@@ -183,7 +183,7 @@ mcd-store-radar/
 **A. 作为 WorkBuddy Skill（推荐）**
 
 ```bash
-git clone https://github.com/<you>/mcd-store-radar.git ~/.workbuddy/skills/mcd-store-radar
+git clone https://github.com/Lightroll/mcd-store-radar.git ~/.workbuddy/skills/mcd-store-radar
 ```
 
 重开一轮会话即可用自然语言调用。
@@ -191,7 +191,7 @@ git clone https://github.com/<you>/mcd-store-radar.git ~/.workbuddy/skills/mcd-s
 **B. 作为命令行工具**
 
 ```bash
-git clone https://github.com/<you>/mcd-store-radar.git
+git clone https://github.com/Lightroll/mcd-store-radar.git
 cd mcd-store-radar
 export MCD_MCP_TOKEN=你的token
 python -m src.cli tools        # 自检
