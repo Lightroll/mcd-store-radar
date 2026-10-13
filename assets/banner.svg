@@ -1,71 +1,82 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-label="麦麦门店雷达 mcd-store-radar">
   <title>麦麦门店雷达 mcd-store-radar</title>
   <desc>基于麦当劳中国官方 MCP 的门店级可得性检索 Skill：查联名商品附近哪些门店在售，以及主题活动哪家店哪天还有名额。</desc>
+  <!--
+    配色依据：麦当劳官方品牌手册
+      (mcdonalds.cz/static/files/logo/mcdonalds_logomanual.pdf)
+      McDonald's Gold   PMS 1235 C  #FFBC0D  —— 主色，大面积铺
+      McDonald's Red    PMS 2035 C  #DB0007  —— 点缀，"a little goes a long way"
+      Kraft             PMS 2312 C  #B69A81  —— 暖中性，做缓冲与呼吸空间
+      Black                         #1A1A1A  —— 文字
+    官方比例指引："plenty of breathing room with lots of Gold, Kraft and splashes of Red"
+  -->
 
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#27251F"/>
-      <stop offset="58%" stop-color="#332E28"/>
-      <stop offset="100%" stop-color="#4A1E1B"/>
-    </linearGradient>
-    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#FFC72C" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#DA291C" stop-opacity="0.15"/>
+    <linearGradient id="goldDepth" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#FFC823"/>
+      <stop offset="100%" stop-color="#FFB300"/>
     </linearGradient>
   </defs>
 
-  <rect width="1280" height="400" fill="url(#bg)"/>
-  <rect x="0" y="0" width="1280" height="6" fill="#FFC72C"/>
-  <rect x="0" y="394" width="1280" height="6" fill="#DA291C"/>
+  <!-- 黄金主底 -->
+  <rect width="1280" height="400" fill="url(#goldDepth)"/>
 
-  <!-- 右侧装饰：雷达扇形 -->
-  <g opacity="0.5">
-    <circle cx="1090" cy="196" r="150" fill="none" stroke="#FFC72C" stroke-width="1" stroke-opacity="0.28"/>
-    <circle cx="1090" cy="196" r="104" fill="none" stroke="#FFC72C" stroke-width="1" stroke-opacity="0.22"/>
-    <circle cx="1090" cy="196" r="58" fill="none" stroke="#FFC72C" stroke-width="1" stroke-opacity="0.18"/>
-    <path d="M1090 196 L1090 46" stroke="#FFC72C" stroke-width="1.2" stroke-opacity="0.3"/>
-    <path d="M1090 196 L1236 196" stroke="#FFC72C" stroke-width="1.2" stroke-opacity="0.3"/>
-    <path d="M1090 196 L1194 92" stroke="#FFC72C" stroke-width="1.2" stroke-opacity="0.3"/>
-    <path d="M1090 196 L986 92" stroke="#FFC72C" stroke-width="1.2" stroke-opacity="0.3"/>
-    <path d="M1090 196 L1194 300" stroke="#FFC72C" stroke-width="1.2" stroke-opacity="0.3"/>
-    <path d="M1090 196 L986 300" stroke="#FFC72C" stroke-width="1.2" stroke-opacity="0.3"/>
-    <path d="M1090 196 L1090 46 A150 150 0 0 1 1184 68 Z" fill="#FFC72C" fill-opacity="0.10"/>
+  <!-- 顶部 / 底部红条（点缀） -->
+  <rect x="0" y="0" width="1280" height="11" fill="#DB0007"/>
+  <rect x="0" y="389" width="1280" height="11" fill="#DB0007"/>
+
+  <!-- 右侧 Kraft 圆（呼吸空间 + 暖中性） -->
+  <circle cx="1064" cy="200" r="188" fill="#B69A81" fill-opacity="0.26"/>
+  <circle cx="1064" cy="200" r="188" fill="none" stroke="#1A1A1A" stroke-opacity="0.10" stroke-width="1.5"/>
+
+  <!-- 雷达扇形（红色点缀线条） -->
+  <g opacity="0.85">
+    <path d="M1064 200 L1064 60 A140 140 0 0 1 1185 130 Z" fill="#DB0007" fill-opacity="0.16"/>
+    <circle cx="1064" cy="200" r="140" fill="none" stroke="#DB0007" stroke-opacity="0.34" stroke-width="1.6"/>
+    <circle cx="1064" cy="200" r="97" fill="none" stroke="#DB0007" stroke-opacity="0.32" stroke-width="1.6"/>
+    <circle cx="1064" cy="200" r="54" fill="none" stroke="#DB0007" stroke-opacity="0.30" stroke-width="1.6"/>
+    <path d="M1064 200 L1064 60" stroke="#DB0007" stroke-opacity="0.36" stroke-width="1.6"/>
+    <path d="M1064 200 L1185 130" stroke="#DB0007" stroke-opacity="0.36" stroke-width="1.6"/>
+    <path d="M1064 200 L943 130" stroke="#DB0007" stroke-opacity="0.36" stroke-width="1.6"/>
+    <path d="M1064 200 L1185 270" stroke="#DB0007" stroke-opacity="0.36" stroke-width="1.6"/>
+    <path d="M1064 200 L943 270" stroke="#DB0007" stroke-opacity="0.36" stroke-width="1.6"/>
   </g>
+
   <!-- 门店点位 -->
-  <circle cx="1046" cy="150" r="7" fill="#FFC72C"/>
-  <circle cx="1136" cy="128" r="5" fill="#FFC72C" fill-opacity="0.85"/>
-  <circle cx="1152" cy="238" r="6" fill="#DA291C"/>
-  <circle cx="1020" cy="252" r="5" fill="#FFC72C" fill-opacity="0.8"/>
-  <circle cx="1090" cy="196" r="9" fill="#FFFFFF"/>
+  <circle cx="1064" cy="200" r="11" fill="#1A1A1A"/>
+  <circle cx="1006" cy="140" r="8" fill="#DB0007"/>
+  <circle cx="1132" cy="126" r="7" fill="#DB0007"/>
+  <circle cx="1146" cy="252" r="8" fill="#1A1A1A" fill-opacity="0.72"/>
+  <circle cx="1000" cy="256" r="7" fill="#DB0007" fill-opacity="0.85"/>
 
   <!-- 左侧文字 -->
-  <text x="70" y="104" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, Arial, sans-serif"
-        font-size="58" font-weight="700" fill="#FFFFFF" letter-spacing="1">麦麦门店雷达</text>
-  <text x="72" y="146" font-family="Consolas, Menlo, monospace"
-        font-size="21" fill="#FFC72C" letter-spacing="5">MCD-STORE-RADAR</text>
+  <text x="70" y="108" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, Arial, sans-serif"
+        font-size="60" font-weight="700" fill="#1A1A1A" letter-spacing="1">麦麦门店雷达</text>
+  <text x="72" y="150" font-family="Consolas, Menlo, monospace"
+        font-size="21" fill="#DB0007" letter-spacing="5">MCD-STORE-RADAR</text>
 
-  <rect x="70" y="172" width="86" height="4" fill="#DA291C"/>
+  <rect x="70" y="176" width="92" height="5" fill="#DB0007"/>
 
-  <text x="70" y="222" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, Arial, sans-serif"
-        font-size="25" fill="#F2EFE8">同一款联名，全城可能只有 1 家店在卖。</text>
-  <text x="70" y="258" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, Arial, sans-serif"
-        font-size="25" fill="#F2EFE8">同一个派对，5 公里内也许一家都约不上。</text>
+  <text x="70" y="228" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, Arial, sans-serif"
+        font-size="26" fill="#1A1A1A">同一款联名，全城可能只有 1 家店在卖。</text>
+  <text x="70" y="266" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, Arial, sans-serif"
+        font-size="26" fill="#1A1A1A">同一个派对，5 公里内也许一家都约不上。</text>
 
-  <text x="70" y="300" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, Arial, sans-serif"
-        font-size="18" fill="#B9B2A6">基于麦当劳中国官方 MCP ｜ 该去哪家店抢 · 该去哪家店约</text>
+  <text x="70" y="306" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, Arial, sans-serif"
+        font-size="18" fill="#6B4A22">基于麦当劳中国官方 MCP ｜ 该去哪家店抢 · 该去哪家店约</text>
 
-  <!-- 数据徽章 -->
-  <g font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="15">
-    <rect x="70" y="326" width="196" height="38" rx="19" fill="#FFC72C" fill-opacity="0.14" stroke="#FFC72C" stroke-opacity="0.45"/>
-    <text x="168" y="351" fill="#FFC72C" text-anchor="middle">5km → 10km 递进检索</text>
+  <!-- 数据徽章：白调承托，红只用于强调 -->
+  <g font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="15" font-weight="600">
+    <rect x="70" y="330" width="200" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.94"/>
+    <text x="170" y="355" fill="#1A1A1A" text-anchor="middle">5km → 10km 递进检索</text>
 
-    <rect x="280" y="326" width="184" height="38" rx="19" fill="#FFC72C" fill-opacity="0.14" stroke="#FFC72C" stroke-opacity="0.45"/>
-    <text x="372" y="351" fill="#FFC72C" text-anchor="middle">leftNum 真实余位</text>
+    <rect x="284" y="330" width="180" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.94"/>
+    <text x="374" y="355" fill="#1A1A1A" text-anchor="middle">leftNum 真实余位</text>
 
-    <rect x="478" y="326" width="176" height="38" rx="19" fill="#FFC72C" fill-opacity="0.14" stroke="#FFC72C" stroke-opacity="0.45"/>
-    <text x="566" y="351" fill="#FFC72C" text-anchor="middle">零第三方包依赖</text>
+    <rect x="478" y="330" width="176" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.94"/>
+    <text x="566" y="355" fill="#1A1A1A" text-anchor="middle">零第三方包依赖</text>
 
-    <rect x="668" y="326" width="150" height="38" rx="19" fill="#DA291C" fill-opacity="0.22" stroke="#DA291C" stroke-opacity="0.6"/>
-    <text x="743" y="351" fill="#FF9E93" text-anchor="middle">15 项测试通过</text>
+    <rect x="668" y="330" width="180" height="38" rx="19" fill="#DB0007"/>
+    <text x="758" y="355" fill="#FFFFFF" text-anchor="middle">15 项测试通过</text>
   </g>
 </svg>
