@@ -1,0 +1,14 @@
+# 本地缓存（门店名 -> storeCode 映射，不含任何凭据）
+.cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 敏感信息 —— 绝不提交
+.env
+mcp.json
+*.token

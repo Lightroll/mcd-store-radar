@@ -1,0 +1,131 @@
+{
+ "run_at": "2026-10-13 13:59:37",
+ "city": "上海",
+ "base": {
+  "lat": 31.235356,
+  "lng": 121.47696
+ },
+ "radius": 5000,
+ "spu": 1830,
+ "item": "联名",
+ "pool": {
+  "total": 304,
+  "with_coord": 301,
+  "by_source": {
+   "nearby": 5,
+   "party": 277,
+   "amap_only": 5,
+   "amap": 19
+  }
+ },
+ "total_calls": 225,
+ "passed": 15,
+ "total": 15,
+ "results": [
+  {
+   "case": "0. MCP 连通与工具枚举",
+   "ok": true,
+   "detail": "服务端暴露 35 个工具",
+   "seconds": 0.1,
+   "calls": null
+  },
+  {
+   "case": "1. 门店池构建（三层并集）",
+   "ok": true,
+   "detail": "池内 304 家 / 带坐标 301 家 / 来源 nearby 5, party 277, amap_only 5, amap 19",
+   "seconds": 4.7,
+   "calls": 8
+  },
+  {
+   "case": "2. 半径筛选（自行 haversine）",
+   "ok": true,
+   "detail": "5000m 内可用编码门店 58 家，最近一家 207m（麦当劳上海黄浦华旭国际大厦餐厅）",
+   "seconds": null,
+   "calls": null
+  },
+  {
+   "case": "3. 需求一 · 5km 在售门店（主路径）",
+   "ok": true,
+   "detail": "核价 58 家（失败 0）→ 在售 46 家；最近：麦当劳上海黄浦华旭国际大厦餐厅 207m",
+   "seconds": 2.9,
+   "calls": 58
+  },
+  {
+   "case": "4. 回验 · 报称『在售』再核一遍",
+   "ok": true,
+   "detail": "抽 6 家重新拉菜单 → 6 家确认在售（误报 0）",
+   "seconds": null,
+   "calls": null
+  },
+  {
+   "case": "5. 回验 · 报称『不在售』再核一遍",
+   "ok": true,
+   "detail": "抽 3 家 → 3 家确认确实没有（漏报 0）",
+   "seconds": null,
+   "calls": null
+  },
+  {
+   "case": "6. 需求一 · 找不到时请求确认（不自行越界）",
+   "ok": true,
+   "detail": "状态=needs_confirm，建议下一档半径=20.0km；提示语：5.0km 范围内没有门店在售「绝不存在的商品名XYZ」。是否扩大到 20.0km？",
+   "seconds": null,
+   "calls": null
+  },
+  {
+   "case": "7. 需求一 · --no-amap 纯 MCP 模式可用",
+   "ok": true,
+   "detail": "纯 MCP 门店池 277 家 / 5000m 内 39 家（对比含高德 58 家）",
+   "seconds": 3.2,
+   "calls": 7
+  },
+  {
+   "case": "8. WGS-84 ↔ GCJ-02 往返精度",
+   "ok": true,
+   "detail": "GCJ→WGS→GCJ 往返偏差 0.0000 米；两坐标系实际偏移 481 米（这就是必须换算的原因）",
+   "seconds": null,
+   "calls": null
+  },
+  {
+   "case": "9. 需求二 · 可预约主题活动清单",
+   "ok": true,
+   "detail": "共 26 项，类目 主题类派对/品鉴会/生日类派对/读书会",
+   "seconds": 0.2,
+   "calls": 1
+  },
+  {
+   "case": "10. 需求二a · 5km 内最近 3 家门店可约日期",
+   "ok": true,
+   "detail": "活动支持门店 219 家（全城）/ 25 家（5000m 内）；最近 3 家可约 3 家，最早可约日期 2026-10-16",
+   "seconds": 2.1,
+   "calls": 4
+  },
+  {
+   "case": "11. 需求二b · 指定日期可约门店 + 余位",
+   "ok": true,
+   "detail": "2026-10-16 在 5000m 内可约门店 22 家（已核 25 家）；余位字段 leftNum 可读=True",
+   "seconds": 2.1,
+   "calls": 28
+  },
+  {
+   "case": "12. 余位明细字段完整性",
+   "ok": true,
+   "detail": "麦当劳上海黄浦华旭国际大厦餐厅 10:30-12:00 限5-12人 余位12 价格45.00元",
+   "seconds": null,
+   "calls": null
+  },
+  {
+   "case": "13. 需求二 · 无可约门店时明确告知",
+   "ok": true,
+   "detail": "2026-12-31 / 5000m 内可约门店 = 0 → 触发『已逐店核实』明示分支",
+   "seconds": 1.7,
+   "calls": 26
+  },
+  {
+   "case": "14. CLI 参数位置回归（曾漏测致 bug）",
+   "ok": true,
+   "detail": "8/8 组参数解析正确",
+   "seconds": null,
+   "calls": null
+  }
+ ]
+}

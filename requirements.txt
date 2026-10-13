@@ -1,0 +1,14 @@
+# 依赖说明
+
+本项目**零第三方依赖**，仅使用 Python 标准库：
+
+- `json` / `urllib.request` / `urllib.parse` / `urllib.error` —— MCP Streamable HTTP 调用
+- `math` —— haversine 距离与 GCJ-02 坐标换算
+- `re` —— 门店名归一化与关键词抽取
+- `concurrent.futures.ThreadPoolExecutor` —— 多门店菜单并发核价
+- `argparse` / `sys` / `os` / `uuid` / `time` —— CLI 与客户端基础能力
+
+运行环境：**Python 3.7+**
+
+因此本文件刻意保持为空 —— `pip install -r requirements.txt` 不会安装任何东西。
+这是本项目的设计取舍：评审无需装依赖即可跑通离线演示与实时查询。
